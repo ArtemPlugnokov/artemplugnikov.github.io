@@ -5,6 +5,223 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style> 
+        body {
+    background: #000 url(table.jpg) no-repeat fixed center;
+    margin: auto;
+  }
+  .top-menu {
+    position: relative; 
+    background: #651a14;
+    box-shadow: inset 0px 0 10px black;
+  }
+  .top-menu:before,
+  .top-menu:after {
+    content: "";
+    display: block;
+    height: 2px;
+    border-top: 3px solid #ffe4cd;
+    border-bottom: 1px solid #ffe4cd;
+    margin-bottom: 2px;
+  }
+  .top-menu:after {
+    border-bottom: 3px solid #ffe4cd;
+    border-top: 1px solid #ffe4cd;
+    box-shadow: 0 0px 30px 2px black;
+    margin-top: 2px;
+  }
+  .menu-main {
+    list-style: none;
+    padding: 0 30px;
+    margin: 0;
+    font-size: 15px;
+    text-align: center;
+    position: relative;
+  }
+  .menu-main:before,
+  .menu-main:after {
+    content: "\25C7";
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #f5f5dc;
+  }
+  .menu-main:before {left: 15px;}
+  .menu-main:after {right: 15px;}
+  .menu-main li {
+    display: inline-block;
+    padding: 1px 0;
+  }
+  .menu-main a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 5px;
+    padding: 6px 15px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    color: #ffe4cd;
+    border-bottom: 1px solid transparent;
+    transition: .3s linear;
+    font-family: 'COMIC SANS MS', sans-serif;
+     color: #ffe4cd;
+     font-size: 20px;
+     text-shadow: 1px 1px 1px black;
+  }
+  .menu-main .current, .menu-main a:hover {
+    border-radius: 8px;
+    background: #ffe4cd;
+    color: #651a14;
+    text-shadow: 0 1px 0 #fff;
+    border-color: #c6c6c6;
+  }
+  @media (max-width: 400px) {
+    .menu-main li {display: block;}
+  }
+  
+  .photo{
+    border-radius: 50%;
+    width: 250px;
+    box-shadow:0 0 15px 1px #651a14;
+  }
+  .photo:hover{
+    cursor:pointer;
+    border-radius: 50%;
+    width: 250px;
+    box-shadow:0 0 30px 2px #ffe4cd;
+  }
+  table.center-main{
+    margin-top: 100px;
+    width: 100%;
+    border-collapse:collapse;
+    border-spacing:0;
+    height: auto;
+  }
+  table.center-main td,table.center-main th {
+    text-align: center;
+    padding: 3px;
+    width: 30px;
+    height: 35px;
+  }
+  table.center-main th {
+    background: #347c99; 
+    color: #fff; 
+    font-weight: normal;
+  }
+  .fio {
+     font-family: 'COMIC SANS MS', sans-serif;
+     font-size: 54px;
+     color: #ffe4cd;
+     letter-spacing: 2px;
+     line-height: 1.4em;
+     margin-bottom: 0;
+     text-shadow: 1px 1px 1px black;
+  }
+  .info{
+    font-family: 'COMIC SANS MS', sans-serif;
+     font-size: 27px;
+     color: #ffe4cd;
+     letter-spacing: 1.4px;
+     line-height: 1em;
+     margin-bottom: 0;
+     text-shadow: 1px 1px 1px black;
+  }
+  .links {
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .textcols {
+    margin-top: 120px;
+    font-size: 0;
+    text-align: center;
+  }
+  .textcols-item1{
+    font-family: 'COMIC SANS MS', sans-serif;
+     font-size: 3vw;
+     color: #ffe4cd;
+     letter-spacing: 2px;
+     line-height: 1.4em;
+     margin-bottom: 0;
+     text-shadow: 1px 1px 1px black;
+    box-shadow: 0 0 5px 1px #ffe4cd,inset 0 0 5px 1px #ffe4cd;
+    border-radius: 50px 10px;
+    white-space: normal;  
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+    background: #651a14;
+    margin-right: 10%;
+  }
+  .textcols-item2{
+    font-family: 'COMIC SANS MS', sans-serif;
+    font-size: 3vw;
+    color: #ffe4cd;
+    letter-spacing: 2px;
+    line-height: 1.2em;
+    margin-bottom: 0;
+    text-shadow: 1px 1px 1px black;
+   box-shadow: 0 0 5px 1px #ffe4cd,inset 0 0 5px 1px #ffe4cd;
+   border-radius: 10px 50px;
+   white-space: normal; 
+   display: inline-block;
+   width: 33%;
+   vertical-align: top;
+   background: #651a14;
+  }
+  p {
+    font-size: 1.5vw;
+    line-height: 2vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-bottom: 1vw;
+  }
+  
+  .contact {
+    margin-top: 120px;
+    margin-left: 25%;
+    text-align: center;
+    font-family: 'COMIC SANS MS', sans-serif;
+     font-size: 3vw;
+     color: #ffe4cd;
+     letter-spacing: 2px;
+     line-height: 1.4em;
+     margin-bottom: 0;
+     text-shadow: 1px 1px 1px black;
+    box-shadow: 0 0 5px 1px #ffe4cd,inset 0 0 5px 1px #ffe4cd;
+    border-radius: 50px 10px;
+    white-space: normal;  
+    display: inline-block;
+    width: 50%;
+    background: #651a14;
+    margin-right: 10%;
+  }
+  .icons {
+    margin-bottom: 30px;
+  }
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0px 0px 0px;
+}
+
+.gallery p {
+    font-size: 30px;
+    padding: 15px 10px 0px 10px;
+}
+
+.gallery section img {
+    width: 180px;
+    max-height: 155px; 
+    margin: 10px; 
+}
+.menu-main .gallery {
+  border-radius: 8px;
+  background: #651a14; /* Same color as contacts button */
+  color: #ffe4cd; /* Text color */
+  text-shadow: 0 1px 0 #fff;
+  border-color: #c6c6c6;
+}
     </style>
     <title>Портфолио</title>
     <link rel="stylesheet" href="style.css">
